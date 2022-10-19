@@ -3,8 +3,8 @@ console.log(data);
 // WRITE YOUR CODE BELOW!
 
 const mainUl = document.querySelector('.dogs-list')
-goodDogVariable = 'yes'
-goodOrBad = 'Good'
+let goodDogVariable = 'yes'
+let goodOrBad = 'Good'
 
 function callDogCard (dog){
     const main__dog = document.querySelector('.main__dog-section')
@@ -36,6 +36,22 @@ function callDogCard (dog){
     const button = document.createElement('button')
     button.innerText=`${goodOrBad} dog!`
     main__dog.appendChild(button)
+
+    button.addEventListener("click", (event) => {
+        naughtyOrGood.innerText = ""
+        button.innerText = ""
+        if (goodDogVariable === 'yes') {
+            goodDogVariable = 'no'
+            goodOrBad = 'Bad'
+            button.innerText=`${goodOrBad} dog!`
+            naughtyOrGood.innerHTML = `<em>Is naughty?</em> ${goodDogVariable}!`
+        } else {
+            goodDogVariable = 'yes'
+            goodOrBad = 'Good'    
+            button.innerText=`${goodOrBad} dog!`
+            naughtyOrGood.innerHTML = `<em>Is naughty?</em> ${goodDogVariable}!` 
+        }
+    })
 }
 
 data.forEach(dog => {
