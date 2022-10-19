@@ -3,6 +3,7 @@ console.log(data);
 // WRITE YOUR CODE BELOW!
 
 const mainUl = document.querySelector('.dogs-list')
+goodDogVariable = 'yes'
 
 function callDogCard (dog){
     const main__dog = document.querySelector('.main__dog-section')
@@ -18,7 +19,6 @@ function callDogCard (dog){
     const section__desc = document.createElement('div')
     main__dog.appendChild(section__desc)
 
-
     const h3 = document.createElement('h3')
     const p = document.createElement('p')
 
@@ -28,6 +28,9 @@ function callDogCard (dog){
     section__desc.appendChild(h3)
     section__desc.appendChild(p)
 
+    const naughtyOrGood = document.createElement('p')
+    naughtyOrGood.innerHTML = `<em>Is naughty?</em> ${goodDogVariable}!`
+    main__dog.appendChild(naughtyOrGood)
 }
 
 data.forEach(dog => {
