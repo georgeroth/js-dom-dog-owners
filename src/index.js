@@ -4,6 +4,7 @@ console.log(data);
 
 const mainUl = document.querySelector('.dogs-list')
 goodDogVariable = 'yes'
+goodOrBad = 'Good'
 
 function callDogCard (dog){
     const main__dog = document.querySelector('.main__dog-section')
@@ -31,6 +32,10 @@ function callDogCard (dog){
     const naughtyOrGood = document.createElement('p')
     naughtyOrGood.innerHTML = `<em>Is naughty?</em> ${goodDogVariable}!`
     main__dog.appendChild(naughtyOrGood)
+
+    const button = document.createElement('button')
+    button.innerText=`${goodOrBad} dog!`
+    main__dog.appendChild(button)
 }
 
 data.forEach(dog => {
