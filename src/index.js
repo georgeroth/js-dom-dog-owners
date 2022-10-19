@@ -4,9 +4,39 @@ console.log(data);
 
 const mainUl = document.querySelector('.dogs-list')
 
+function callDogCard (dog){
+    const main__dog = document.querySelector('.main__dog-section')
+    main__dog.innerText= ""
+    const name = document.createElement('h2')
+    name.innerText=(dog.name)
+    main__dog.appendChild(name)
+
+    const img = document.createElement('img')
+    img.src=(dog.image)
+    main__dog.appendChild(img)
+
+    const section__desc = document.createElement('div')
+    main__dog.appendChild(section__desc)
+
+
+    const h3 = document.createElement('h3')
+    const p = document.createElement('p')
+
+    h3.innerText= "Bio"
+    p.innerText= (dog.bio)
+
+    section__desc.appendChild(h3)
+    section__desc.appendChild(p)
+
+}
+
 data.forEach(dog => {
     const dogButton = document.createElement('li')
     dogButton.innerText = dog.name
     dogButton.setAttribute('class', 'dogs-list__button')
     mainUl.appendChild(dogButton)
+    dogButton.addEventListener("click", function() {
+        callDogCard(dog)
+    })
 })
+
