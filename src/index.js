@@ -67,7 +67,9 @@ function createDogMenuItems() {
 }
 
 createDogMenuItems()
+createForm()
 
+function createForm(){
 const addNewDog = document.querySelector('.dogs-list__button--add')
 addNewDog.addEventListener("click",(event) =>{
     console.log("button clicked")
@@ -137,6 +139,12 @@ addNewDog.addEventListener("click",(event) =>{
         plusButton.setAttribute('class', 'dogs-list__button dogs-list__button--add')
         mainUl.appendChild(plusButton)
 
+        createForm()
         createDogMenuItems()
+        callDogCard(data[0])
     })
 })
+}
+
+
+
