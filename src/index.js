@@ -77,4 +77,44 @@ addNewDog.addEventListener("click",(event) =>{
     form.setAttribute('class','form')
     main__dog.appendChild(form)
 
+    const labelName = document.createElement('label')
+    labelName.innerText="Dog's Name"
+    labelName.setAttribute('for','name')
+    form.appendChild(labelName)
+
+    const inputName = document.createElement('input')
+    inputName.setAttribute('type','text')
+    inputName.setAttribute('id','name')
+    inputName.setAttribute('name','name')
+    form.appendChild(inputName)
+
+    const labelImage = document.createElement('label')
+    labelImage.innerText="Dog's Picture"
+    labelImage.setAttribute('for','image')
+    form.appendChild(labelImage)
+
+    const inputImage = document.createElement('input')
+    inputImage.setAttribute('type','url')
+    inputImage.setAttribute('id','image')
+    inputImage.setAttribute('name','image')
+    form.appendChild(inputImage)
+
+    const labelBio = document.createElement('label')
+    labelBio.innerText="Dog's Bio"
+    labelBio.setAttribute('for','bio')
+    form.appendChild(labelBio)
+
+    const inputBio = document.createElement('textarea')
+    inputBio.setAttribute('rows','5')
+    inputBio.setAttribute('id','bio')
+    inputBio.setAttribute('name','bio')
+    form.appendChild(inputBio)
+
+    const submit = document.createElement('input')
+    submit.setAttribute('type','submit')
+    submit.setAttribute('id','submit')
+    submit.setAttribute('name','submit')
+    form.appendChild(submit)
+
+
 })
