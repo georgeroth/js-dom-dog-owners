@@ -5,9 +5,9 @@ console.log(data);
 const mainUl = document.querySelector('.dogs-list')
 let goodDogVariable = 'yes'
 let goodOrBad = 'Good'
+const main__dog = document.querySelector('.main__dog-section')
 
 function callDogCard (dog){
-    const main__dog = document.querySelector('.main__dog-section')
     main__dog.innerText= ""
     const name = document.createElement('h2')
     name.innerText=(dog.name)
@@ -64,3 +64,17 @@ data.forEach(dog => {
     })
 })
 
+const addNewDog = document.querySelector('.dogs-list__button--add')
+addNewDog.addEventListener("click",(event) =>{
+    console.log("button clicked")
+    main__dog.innerText= ""
+
+    const newDogH2 = document.createElement('h2')
+    newDogH2.innerText = "Add a new Dog"
+    main__dog.appendChild(newDogH2)
+
+    const form = document.createElement('form')
+    form.setAttribute('class','form')
+    main__dog.appendChild(form)
+
+})
