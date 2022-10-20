@@ -12,7 +12,7 @@ const data = [
   {
     id: 2,
     name: "Nugget",
-    bio: `Bio 2`,
+    bio: `I am mischevious rotweiler who is not looking for anything. I am very much so adored by my parents, Sally and Andy. I love regular balls that are not specific to tennis or baseball. I love eating chicken and drooling. Fatima doesn't enjoy that too much.`,
     isGoodDog: false,
     image: "https://curriculum-content.s3.amazonaws.com/js/woof-woof/dog_2.jpg"
   },
